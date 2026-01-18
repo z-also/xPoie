@@ -1,0 +1,359 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    " (%@)" : {
+
+    },
+    "-" : {
+
+    },
+    ":" : {
+
+    },
+    "%@" : {
+
+    },
+    "%lld" : {
+
+    },
+    "%lld AM" : {
+
+    },
+    "%lld PM" : {
+
+    },
+    "%lld/%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "⌘+K" : {
+
+    },
+    "A calendar space is a place where you can organize your" : {
+
+    },
+    "A calendar space is a place where you can organize your events and schedule efficiently" : {
+
+    },
+    "Accent color" : {
+
+    },
+    "Add Block above" : {
+
+    },
+    "Add Block below" : {
+
+    },
+    "Add subtask" : {
+
+    },
+    "Add task" : {
+
+    },
+    "Add task above" : {
+
+    },
+    "Add task below" : {
+
+    },
+    "All contents in the project will be deleted and not able to recover" : {
+
+    },
+    "appearance" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appearance"
+          }
+        }
+      }
+    },
+    "Back" : {
+
+    },
+    "Calendar" : {
+
+    },
+    "Calendar spaces" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Click to record shortcut" : {
+
+    },
+    "Color" : {
+
+    },
+    "Confirm" : {
+
+    },
+    "create" : {
+
+    },
+    "Create" : {
+
+    },
+    "Create a calendar space" : {
+
+    },
+    "Create Notes pad" : {
+
+    },
+    "Create your first tasks block →" : {
+
+    },
+    "Created" : {
+
+    },
+    "day" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Delete Note" : {
+
+    },
+    "Delete project \"%@\"?" : {
+
+    },
+    "Delete this task?" : {
+
+    },
+    "Description" : {
+
+    },
+    "do a research for agent..." : {
+
+    },
+    "Duration:" : {
+
+    },
+    "Edit" : {
+
+    },
+    "End:" : {
+
+    },
+    "Enter some text" : {
+
+    },
+    "Frame" : {
+
+    },
+    "general" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General"
+          }
+        }
+      }
+    },
+    "haha" : {
+
+    },
+    "hahah" : {
+
+    },
+    "Hide notes" : {
+
+    },
+    "Interface theme" : {
+
+    },
+    "Key" : {
+      "extractionState" : "manual"
+    },
+    "Mins" : {
+
+    },
+    "month" : {
+
+    },
+    "move to" : {
+
+    },
+    "Name" : {
+
+    },
+    "New block" : {
+
+    },
+    "New Block" : {
+
+    },
+    "New Chat" : {
+
+    },
+    "New Folder" : {
+
+    },
+    "New Note" : {
+
+    },
+    "New Notepad" : {
+
+    },
+    "New Task" : {
+
+    },
+    "New Task Book" : {
+
+    },
+    "No date selected" : {
+
+    },
+    "Note" : {
+
+    },
+    "Notepad" : {
+
+    },
+    "Notepads" : {
+
+    },
+    "or use suggestions below to get started quickly" : {
+
+    },
+    "outline" : {
+
+    },
+    "Pause" : {
+
+    },
+    "Personalize the appearance of your app. Select a theme, and sync with your system's light/dark mode" : {
+
+    },
+    "Pick a date above" : {
+
+    },
+    "Pin as floating window" : {
+
+    },
+    "Pin to top" : {
+
+    },
+    "Pinneds" : {
+
+    },
+    "Projects" : {
+
+    },
+    "Quick Notes" : {
+
+    },
+    "Recently Deleted" : {
+
+    },
+    "Recording shortcut..." : {
+
+    },
+    "Reminders" : {
+
+    },
+    "Rename" : {
+
+    },
+    "Research" : {
+
+    },
+    "Save to" : {
+
+    },
+    "Schedule" : {
+
+    },
+    "search" : {
+
+    },
+    "Search" : {
+
+    },
+    "shortcuts" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shortcuts"
+          }
+        }
+      }
+    },
+    "Show notes" : {
+
+    },
+    "Spotlight shortcut" : {
+
+    },
+    "Start now" : {
+
+    },
+    "Start:" : {
+
+    },
+    "Sticky" : {
+
+    },
+    "Sticky window" : {
+
+    },
+    "Task" : {
+
+    },
+    "Tasks" : {
+
+    },
+    "This action cannot be undone." : {
+
+    },
+    "Time" : {
+
+    },
+    "Title" : {
+
+    },
+    "Today" : {
+
+    },
+    "Toggle" : {
+
+    },
+    "uncatagoried" : {
+
+    },
+    "Unpin" : {
+
+    },
+    "week" : {
+
+    },
+    "What's your main focus at this moment?" : {
+
+    },
+    "xPoie" : {
+
+    },
+    "Yes, delete" : {
+
+    },
+    "随机选择" : {
+
+    }
+  },
+  "version" : "1.0"
+}

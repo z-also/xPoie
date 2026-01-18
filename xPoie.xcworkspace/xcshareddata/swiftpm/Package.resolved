@@ -1,0 +1,33 @@
+{
+  "originHash" : "828b3cd11f7cf5c475b2388db9ab307c3eba6b81f67c5a918b5c52a23fda8b7e",
+  "pins" : [
+    {
+      "identity" : "hotkey",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/soffes/HotKey",
+      "state" : {
+        "branch" : "main",
+        "revision" : "a3cf605d7a96f6ff50e04fcb6dea6e2613cfcbe4"
+      }
+    },
+    {
+      "identity" : "swift-cmark",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-cmark.git",
+      "state" : {
+        "branch" : "gfm",
+        "revision" : "924936d0427cb25a61169739a7660230bffa6ea6"
+      }
+    },
+    {
+      "identity" : "swift-markdown",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-markdown.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "b2135f426fca19029430fbf26564e953b2d0f3d3"
+      }
+    }
+  ],
+  "version" : 3
+}
