@@ -26,16 +26,17 @@ struct Typography {
 
 extension Typography {
     enum Size: CGFloat {
-        case h1  = 28
-        case h2  = 26
-        case h3  = 24
-        case h4  = 20
-        case h5  = 17
-        case h6  = 15
-        case p   = 13
-        case sm  = 12
-        case xs  = 11
-        case xxs = 10
+        case huge = 42
+        case h1   = 28
+        case h2   = 26
+        case h3   = 24
+        case h4   = 20
+        case h5   = 17
+        case h6   = 15
+        case p    = 13
+        case sm   = 12
+        case xs   = 11
+        case xxs  = 10
     }
 }
 

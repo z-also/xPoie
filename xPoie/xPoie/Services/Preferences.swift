@@ -76,4 +76,8 @@ extension Preferences.Item {
             }
         )
     }
+    
+    static var signedIn: Preferences.Item<Bool, Bool> {
+        return .init(key: #function, defaultValue: false)
+    }
 }

@@ -16,6 +16,7 @@ extension Modules {
     nonisolated(unsafe) static let things = Things()
     nonisolated(unsafe) static let events = Events()
     nonisolated(unsafe) static let agenda = Agenda()
+    nonisolated(unsafe) static let account = Account()
     nonisolated(unsafe) static let projects = Projects()
     nonisolated(unsafe) static let calendar = Calendar()
     nonisolated(unsafe) static let spotlight = Spotlight()
@@ -35,6 +36,7 @@ extension EnvironmentValues {
     @Entry var events = Modules.events
     @Entry var agenda = Modules.agenda
     @Entry var theme = Modules.vars.theme
+    @Entry var account = Modules.account
     @Entry var calendar = Modules.calendar
     @Entry var settings = Modules.settings
     @Entry var projects = Modules.projects

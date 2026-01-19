@@ -10,7 +10,10 @@ struct ProjectsSceneSidebar: View {
     @Environment(\.projects) var projects
 
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(alignment: .leading, spacing: 0) {
+            AccountFeature_ProfileLink()
+                .padding(.bottom, 12)
+
             StaticRoutes(scene: main.scene)
             
             Spacer().frame(height: 16)
@@ -134,7 +137,7 @@ fileprivate struct StaticRoutes: View {
         VStack(spacing: 6) {
             route(icon: "questionmark.circle.dashed", title: "Inbox", scene: .inbox)
             route(icon: "calendar", title: "Calendar", scene: .calendar)
-            route(icon: "note.text.badge.plus", title: "Ai Assistant", scene: .brain)
+//            route(icon: "note.text.badge.plus", title: "Ai Assistant", scene: .brain)
         }
     }
     

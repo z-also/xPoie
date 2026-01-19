@@ -6,7 +6,6 @@ struct MainScene: View {
 
     var body: some View {
         Platform()
-//        Custom()
         .onTapGesture {
             input.focus = .none
         }
@@ -20,26 +19,6 @@ fileprivate struct Platform: View {
     @State private var columnVisibility = NavigationSplitViewVisibility.all
     
     var body: some View {
-//        AppKitNavigationSplitView(
-//            sidebar:
-//                Sidebar(scene: main.scene)
-//                    .navigationSplitViewColumnWidth(
-//                        min: Consts.mainSidebarMinWidth,
-//                        ideal: Consts.mainSidebarIdealWidth,
-//                        max: Consts.mainSidebarMaxWidth
-//                    )
-//                    .toolbar {
-//                        ToolbarItem(placement: .primaryAction) {
-//                            Button(action: {}) {
-//                                Label("asdfe", systemImage: "plus")
-//                            }
-//                        }
-//                    }
-//            ,
-//            detail:
-//                Detail(scene: main.scene)
-//        )
-//        .edgesIgnoringSafeArea(.vertical)
         NavigationSplitView(columnVisibility: $columnVisibility) {
             Sidebar(scene: main.scene)
                 .navigationSplitViewColumnWidth(
@@ -65,7 +44,6 @@ fileprivate struct Platform: View {
                 }
             }
         }
-//        .inspector(isPresented: <#T##Binding<Bool>#>) {}
     }
 }
 
@@ -111,13 +89,12 @@ fileprivate struct Sidebar: View {
     let scene: Modules.Main.Scene
     
     var body: some View {
-        Group {
-            if scene == .projects || scene == .inbox {
-                ProjectsSceneSidebar()
-            }
-            if scene == .calendar {
-                CalendarSceneSidebar()
-            }
+        if scene == .projects || scene == .inbox {
+            ProjectsSceneSidebar()
+        } else if scene == .account {
+            AccountSceneSidebar()
+        } else if scene == .calendar {
+            CalendarSceneSidebar()
         }
     }
 }
@@ -134,6 +111,10 @@ fileprivate struct Detail: View {
             if scene == .home {
                 HomeSceneMain()
             }
+            if scene == .account {
+                AccountSceneMain()
+            }
+            
             if scene == .inbox {
                 InboxSceneMain()
             }

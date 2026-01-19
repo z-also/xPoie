@@ -10,6 +10,7 @@ extension Modules.Main {
         case calendar
         case analytics
         case projects
+        case account
     }
     
     func `switch`(scene: Scene) {
