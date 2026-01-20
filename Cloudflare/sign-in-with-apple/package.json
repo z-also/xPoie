@@ -5,8 +5,10 @@
 	"scripts": {
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev",
+		"dev:local": "wrangler dev --local",
 		"start": "wrangler dev",
 		"test": "vitest",
+		"d1:local": "wrangler d1 execute xPoie-prod --local --file=./schema.sql",
 		"cf-typegen": "wrangler types"
 	},
 	"devDependencies": {
@@ -14,5 +16,8 @@
 		"typescript": "^5.5.2",
 		"vitest": "~3.2.0",
 		"wrangler": "^4.59.2"
+	},
+	"dependencies": {
+		"jose": "^6.1.3"
 	}
 }

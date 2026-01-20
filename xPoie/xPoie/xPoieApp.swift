@@ -43,6 +43,11 @@ struct xPoieApp: App {
                 NotesFeatureSticky.shared.toggleSticky(for: note)
             }
         }
+        
+        Task {
+            let vv = try await APIs.auth()
+            print("ddd ", vv)
+        }
     }
     
     private func onSignIn(authorization: ASAuthorization) {

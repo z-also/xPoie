@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1906B1DA2F1FE6E70041EEEA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1906B1D92F1FE6E70041EEEA /* Alamofire */; };
 		193C7C472F1DD5AD00B1D004 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 193C7C462F1DD5AD00B1D004 /* README.md */; };
 		19EE35802F1D44A400C77390 /* Infy in Frameworks */ = {isa = PBXBuildFile; productRef = 19EE357F2F1D44A400C77390 /* Infy */; };
 		19EE35832F1D44B000C77390 /* Llmx in Frameworks */ = {isa = PBXBuildFile; productRef = 19EE35822F1D44B000C77390 /* Llmx */; };
@@ -61,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1906B1DA2F1FE6E70041EEEA /* Alamofire in Frameworks */,
 				19EE35862F1D44BB00C77390 /* RTex in Frameworks */,
 				19EE35802F1D44A400C77390 /* Infy in Frameworks */,
 				19EE35892F1D463C00C77390 /* HotKey in Frameworks */,
@@ -130,6 +132,7 @@
 				19EE35822F1D44B000C77390 /* Llmx */,
 				19EE35852F1D44BB00C77390 /* RTex */,
 				19EE35882F1D463C00C77390 /* HotKey */,
+				1906B1D92F1FE6E70041EEEA /* Alamofire */,
 			);
 			productName = xPoie;
 			productReference = 19EE33522F1D43EB00C77390 /* xPoie.app */;
@@ -218,6 +221,7 @@
 				19EE35812F1D44B000C77390 /* XCLocalSwiftPackageReference "../Llmx" */,
 				19EE35842F1D44BB00C77390 /* XCLocalSwiftPackageReference "../RTex" */,
 				19EE35872F1D463C00C77390 /* XCRemoteSwiftPackageReference "HotKey" */,
+				1906B1D82F1FE6E70041EEEA /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 19EE33532F1D43EB00C77390 /* Products */;
@@ -641,6 +645,14 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1906B1D82F1FE6E70041EEEA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.0;
+			};
+		};
 		19EE35872F1D463C00C77390 /* XCRemoteSwiftPackageReference "HotKey" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/soffes/HotKey";
@@ -652,6 +664,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1906B1D92F1FE6E70041EEEA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1906B1D82F1FE6E70041EEEA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		19EE357F2F1D44A400C77390 /* Infy */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Infy;
