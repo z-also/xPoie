@@ -4,9 +4,15 @@ import SwiftUI
 struct GlimFeature_Assistant: View {
     @Environment(\.glim) var glim
     
-    
     @State var downloadProgess: Double = 0.0
     
+    @State var models: [Llmx.ModelInfo] = [
+        Llmx.ModelRegistry.gemma_7b_it,
+        Llmx.ModelRegistry.llama3_8b_instruct,
+        Llmx.ModelRegistry.phi_3_mini_4k_instruct
+    ]
+    
+    @State var modelStates = Llmx.ModelManager.shared.states
     
     var body: some View {
         VStack {
@@ -14,13 +20,18 @@ struct GlimFeature_Assistant: View {
             
             ProgressView("download...", value: downloadProgess, total: 1)
             
+            
+            ForEach(models, id: \.id) { model in
+                let state = modelStates.get(id: model.id)
+                ModelView(model: model, state: state)
+            }
+            
             ScrollView {
                 VStack {
                     GlimFeature_Sugs(sugs: glim.sugs)
                 }
                 .padding(16)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                
                 
             }
             
@@ -96,5 +107,43 @@ fileprivate struct Header: View {
     
     private func close() {
         Modules.glim.present(.none)
+    }
+}
+
+
+fileprivate struct ModelView: View {
+    let model: Llmx.ModelInfo
+    let state: Llmx.ModelState?
+    
+    var body: some View {
+        HStack {
+            Text(model.name)
+            
+            if let state = state {
+                switch state.status {
+                case .downloaded(_):
+                    Text("haha")
+                case .none:
+                    Text("none")
+                case .notDownloaded:
+                    Text("not downloaded")
+                case .downloading(let progress, let speed):
+                    ProgressView("download...", value: progress, total: 1)
+                case .failed(let msg):
+                    Text("failed \(msg)")
+                }
+            }
+            
+            Button(action: download) {
+                Text("Download")
+            }
+        }
+    }
+    
+    private func download() {
+        let model = model
+        Task {
+            try await Llmx.ModelManager.shared.download(for: model)
+        }
     }
 }

@@ -147,6 +147,9 @@
     "download" : {
 
     },
+    "Download" : {
+
+    },
     "download..." : {
 
     },
@@ -160,6 +163,9 @@
 
     },
     "Enter some text" : {
+
+    },
+    "failed %@" : {
 
     },
     "Frame" : {
@@ -227,6 +233,12 @@
 
     },
     "No date selected" : {
+
+    },
+    "none" : {
+
+    },
+    "not downloaded" : {
 
     },
     "Note" : {
