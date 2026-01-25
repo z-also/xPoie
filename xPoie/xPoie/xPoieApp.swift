@@ -1,3 +1,4 @@
+import Llmx
 import Infy
 import RTex
 import Combine
@@ -22,9 +23,13 @@ struct xPoieApp: App {
         .defaultSize(width: 1200, height: 780)
         .windowResizability(.contentSize) // 允许窗口根据内容调整大小
         .windowToolbarStyle(.unified(showsTitle: false))
-
-        Settings {
-            SettingsScene().modifier(PlasticWindow())
+        .commands {
+            CommandGroup(replacing: .appSettings) {
+                Button("Settings…") {
+                    Modules.main.switch(scene: .settings)
+                }
+                .keyboardShortcut(",", modifiers: .command)
+            }
         }
 
         MenuBarExtra("xPoie", systemImage: "clock") {
@@ -48,6 +53,8 @@ struct xPoieApp: App {
             let vv = try await APIs.auth()
             print("ddd ", vv)
         }
+        
+        Llmx.ModelManager.shared.initStates(models: Llmx.ModelRegistry.textLlms + Llmx.ModelRegistry.visionLlms)
     }
     
     private func onSignIn(authorization: ASAuthorization) {

@@ -102,7 +102,31 @@ fileprivate struct Bot: View {
     
     private func tryLlmx() {
         Task {
-            try? await llmxDemo()
+            try? await mlxDemo()
+        }
+    }
+    
+    private func mlxDemo() async throws {
+        let mlx = Llmx.LocalMLXProvider()
+        let streaming = Llmx.Streaming(
+            style: .init(
+                textColor: Modules.vars.theme.text.primary
+            ),
+            committed: $committedSegments,
+            buffering: $bufferingSegment
+        )
+        let messages = [Llmx.Message(role: .user, content: content)]
+        
+        var temp: [String] = []
+        
+        let model = "phi3-mini-4k-instruct"
+        
+        for try await token in try await mlx.sendChat(messages: messages,
+                                                      model: model,
+                                                      parameters: .init(temperature: 0.7)) {
+            resp += token
+            streaming.receive(string: token)
+            temp.append(token)
         }
     }
     

@@ -48,5 +48,37 @@ extension Llmx {
         public func cancelDownload(for modelId: String) {
             
         }
+
+        private func checkModelLocalExistence(model: ModelInfo) -> URL? {
+            guard case .huggingFace(let repoId) = model.source else { return nil }
+            
+            let repo = Hub.Repo(id: repoId)
+            let location = HubApi.shared.localRepoLocation(repo)
+            
+            let fm = FileManager.default
+            guard fm.fileExists(atPath: location.path) else { return nil }
+            
+            let requiredFiles = [
+                "config.json",
+                "tokenizer.json",
+                "tokenizer_config.json"
+            ]
+            
+            for file in requiredFiles {
+                let fileURL = location.appendingPathComponent(file)
+                if !fm.fileExists(atPath: fileURL.path) {
+                    return nil
+                }
+            }
+            
+            return location
+        }
+        
+        public func initStates(models: [ModelInfo]) {
+            models.forEach { model in
+                let loc = checkModelLocalExistence(model: model)
+                states.update(id: model.id, status: loc == nil ? .none : .downloaded(loc!))
+            }
+        }
     }
 }

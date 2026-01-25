@@ -52,3 +52,7 @@
         - title：Free Canvas
         - subtitle：Weave Ideas Into Visual Stories
         - subtitle：Shape & Unfold Your Ideas
+
+
+## Version2
+- Slogan（主）：Your All-in-One Space to   (Capture ideas)、 Organize works、Unfold your creatity

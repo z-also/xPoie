@@ -91,8 +91,8 @@ fileprivate struct Sidebar: View {
     var body: some View {
         if scene == .projects || scene == .inbox {
             ProjectsSceneSidebar()
-        } else if scene == .account {
-            AccountSceneSidebar()
+        } else if scene == .settings {
+            SettingsSceneSidebar()
         } else if scene == .calendar {
             CalendarSceneSidebar()
         }
@@ -108,26 +108,22 @@ fileprivate struct Detail: View {
     
     var body: some View {
         ZStack {
-            if scene == .home {
+            switch scene {
+            case .home:
                 HomeSceneMain()
-            }
-            if scene == .account {
-                AccountSceneMain()
-            }
-            
-            if scene == .inbox {
+            case .inbox:
                 InboxSceneMain()
-            }
-            if scene == .projects {
-                ProjectsSceneMain()
-            }
-            if scene == .calendar {
+            case .calendar:
                 CalendarSceneMain()
                     .toolbar {
                         ToolbarItemGroup(placement: .principal) {
                             MainNavigator()
                         }
                     }
+            case .projects:
+                ProjectsSceneMain()
+            case .settings:
+                SettingsSceneMain()
             }
             
             GlimFeature_Assistant()

@@ -1,9 +1,12 @@
+import Llmx
 import SwiftUI
 import SwiftData
 
 extension Modules {
     @Observable class Glim {
         var sugs: [Sug] = []
+        
+        var modelStates = Llmx.ModelManager.shared.states
         
         var presentation: Presentation = .none
         

@@ -3,14 +3,10 @@ import SwiftUI
 extension Modules.Main {
     enum Scene: String {
         case home
-        case tasks
         case inbox
-        case notes
-        case brain
         case calendar
-        case analytics
         case projects
-        case account
+        case settings
     }
     
     func `switch`(scene: Scene) {

@@ -187,8 +187,10 @@ extension Text {
             .foregroundStyle(config.color())
     }
     
+    @MainActor
     func typography(_ config: Typography, size: Typography.Size) -> some View {
         font(.system(size: size.rawValue, weight: config.weight))
+            .foregroundStyle(config.color())
     }
     
     @MainActor
@@ -197,8 +199,8 @@ extension Text {
             .foregroundStyle(config.color())
     }
     
-    func font(size: Typography.Size, weight: Font.Weight? = nil) -> some View {
-        font(.system(size: size.rawValue, weight: weight))
+    func font(size: Typography.Size, weight: Font.Weight? = nil, design: Font.Design? = nil) -> some View {
+        font(.system(size: size.rawValue, weight: weight, design: design))
     }
 }
 

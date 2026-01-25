@@ -18,11 +18,13 @@ extension Llmx {
         public let id: String
         public let name: String
         public let source: ModelSource
+        public let fileSizeGB: Double?
         
-        public init(id: String, name: String, source: ModelSource) {
+        public init(id: String, name: String, source: ModelSource, fileSizeGB: Double? = nil) {
             self.id = id
             self.name = name
             self.source = source
+            self.fileSizeGB = fileSizeGB
         }
     }
     

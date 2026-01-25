@@ -379,6 +379,20 @@ extension Visual {
             return s.stroke(color.opacity(a ? 0.8 : h ? 0.6 : 0.4), lineWidth: 2)
         }
     )
+    
+    static let route = Self.init(
+        name: "route",
+        shape: { RoundedRectangle(cornerRadius: 10) },
+        foreground: { (theme, h, a) in theme.text.primary },
+        background: { (theme, h, a, s) in s.fill(h || a ? theme.fill.tertiary : Color.clear) }
+    )
+    
+    static let secondaryRoute = Self.init(
+        name: "secondaryRoute",
+        shape: { RoundedRectangle(cornerRadius: 10) },
+        foreground: { (theme, h, a) in theme.text.secondary },
+        background: { (theme, h, a, s) in s.fill(h || a ? theme.fill.tertiary : Color.clear) }
+    )
 }
 
 extension Visual {

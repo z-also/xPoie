@@ -1,21 +1,24 @@
 import SwiftUI
 
 struct AccountFeature_ProfileLink: View {
+    @State private var hovered = false
     var body: some View {
         Button(action: onClick) {
-            Image(systemName: "plus")
+            Image(systemName: hovered ? "gear" : "plus")
                 .resizable()
-                .frame(width: 20, height: 20)
-                .background(.green)
+                .frame(width: 16, height: 16)
+                .padding(2)
+                .background(hovered ? .clear : .green)
                 .clipShape(.rect(cornerRadius: 6))
             
             Text("Z's Space")
         }
         .buttonStyle(.omni)
+        .onHover { h in withAnimation { hovered = h } }
     }
     
     private func onClick() {
-        Modules.main.switch(scene: .account)
+        Modules.main.switch(scene: .settings)
     }
 }
 

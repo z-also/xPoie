@@ -1,6 +1,8 @@
 import SwiftUI
 import AuthenticationServices
 
+// ui 参考 https://humansintheloop.tech/
+
 struct WelcomeScene: View {
     let onSignIn: (ASAuthorization) -> Void
 
@@ -12,16 +14,16 @@ struct WelcomeScene: View {
                 VStack {
                     Brand()
                     
-                    Spacer()
+                    Spacer().frame(height: 100)
                     
                     Taglines()
                     
-                    SignInWithApple(onSuccess: onSignIn, onFailure: { _ in })
-                    
                     Spacer()
+                    
+                    SignInWithApple(onSuccess: onSignIn, onFailure: { _ in })
                 }
-                    .padding(48)
-                    .frame(width: 460, alignment: .topLeading)
+                    .padding(42)
+                    .frame(width: 480, alignment: .topLeading)
                 
                 FeaturesTeller()
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
@@ -33,6 +35,7 @@ struct WelcomeScene: View {
 }
 
 fileprivate struct Brand: View {
+    @Environment(\.theme) private var theme
     var body: some View {
         HStack {
             Image("logo")
@@ -40,8 +43,9 @@ fileprivate struct Brand: View {
                 .frame(width: 24, height: 24)
             
             Text("xPoie")
-                .typography(.h4)
-            
+                .foregroundStyle(theme.semantic.brand.gradient)
+                .font(size: .h4, weight: .regular, design: .rounded)
+
             Spacer()
         }
     }
@@ -52,12 +56,20 @@ fileprivate struct Taglines: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Capture, Organize, Create — Unfold boldly")
-                .typography(.h1, size: .huge, weight: .regular)
-            
-            Text("All-in-one workspace where ideas flow freely")
-                .typography(.h5)
-            
+            Text("Your All-in-One space to")
+//                .font(size: .huge, weight: .medium)
+                .font(.system(size: 28, weight: .medium))
+
+            TypewriterCarousel(
+                texts: [
+                    "Priority tasks",
+                    "Capture ideas",
+                    "Unfold creativity",
+                    "Supercharge with AI"
+                ],
+                deleteBeforeNext: true
+            )
+
             Text("Tasks, infinite canvas, AI companion, and instant access — built for your daily work, life, and creative moments.")
         }
     }

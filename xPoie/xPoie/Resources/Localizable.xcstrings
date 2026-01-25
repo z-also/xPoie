@@ -35,6 +35,9 @@
         }
       }
     },
+    "|" : {
+
+    },
     "⌘+K" : {
 
     },
@@ -44,7 +47,7 @@
     "A calendar space is a place where you can organize your events and schedule efficiently" : {
 
     },
-    "Accent color" : {
+    "Account" : {
 
     },
     "Add Block above" : {
@@ -65,13 +68,14 @@
     "Add task below" : {
 
     },
+    "Advanced Settings" : {
+
+    },
     "All contents in the project will be deleted and not able to recover" : {
 
     },
-    "All-in-one workspace where ideas flow freely" : {
-
-    },
     "appearance" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -91,9 +95,6 @@
 
     },
     "Cancel" : {
-
-    },
-    "Capture, Organize, Create — Unfold boldly" : {
 
     },
     "Click to record shortcut" : {
@@ -144,9 +145,6 @@
     "do a research for agent..." : {
 
     },
-    "download" : {
-
-    },
     "Download" : {
 
     },
@@ -172,6 +170,7 @@
 
     },
     "general" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -181,6 +180,9 @@
         }
       }
     },
+    "General Settings" : {
+
+    },
     "haha" : {
 
     },
@@ -188,9 +190,6 @@
 
     },
     "Hide notes" : {
-
-    },
-    "Interface theme" : {
 
     },
     "Key" : {
@@ -259,9 +258,6 @@
     "Pause" : {
 
     },
-    "Personalize the appearance of your app. Select a theme, and sync with your system's light/dark mode" : {
-
-    },
     "Pick a date above" : {
 
     },
@@ -301,10 +297,16 @@
     "Schedule" : {
 
     },
+    "sdfefkmm" : {
+
+    },
     "search" : {
 
     },
     "Search" : {
+
+    },
+    "Settings…" : {
 
     },
     "shortcuts" : {
@@ -322,9 +324,6 @@
 
     },
     "Sign out" : {
-
-    },
-    "Spotlight shortcut" : {
 
     },
     "Start now" : {
@@ -379,6 +378,9 @@
 
     },
     "Yes, delete" : {
+
+    },
+    "Your All-in-One space to" : {
 
     },
     "Z's Space" : {
