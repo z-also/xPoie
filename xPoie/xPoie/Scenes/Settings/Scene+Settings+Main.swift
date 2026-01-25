@@ -14,6 +14,8 @@ struct SettingsSceneMain: View {
                 Text("")
             case .localModels:
                 SettingsSceneLocalModels()
+            case .subscription:
+                SettingsSceneSubscription()
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)

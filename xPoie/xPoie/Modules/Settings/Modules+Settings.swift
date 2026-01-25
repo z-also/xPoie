@@ -8,6 +8,7 @@ extension Modules {
         
         enum Scene {
             case general
+            case subscription
             case appearance
             case shortcuts
             case localModels

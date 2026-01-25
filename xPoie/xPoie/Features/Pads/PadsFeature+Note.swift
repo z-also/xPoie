@@ -171,8 +171,7 @@ class PadFeatureNote2: Infy.NodeRepresenter<Modules.Pads.Node> {
         case .expand:
             coordinator?.present(detail: self)
         case .sticky:
-            print("")
-            //
+            NotesFeatureSticky.shared.toggleSticky(for: data)
         }
     }
     
@@ -303,7 +302,7 @@ fileprivate class Menubar: NSView {
         
         let actions: [Action] = [
             .init(icon: "arrow.down.backward.and.arrow.up.forward", type: .expand),
-            .init(icon: "plus", type: .sticky)
+            .init(icon: "rectangle.on.rectangle", type: .sticky)
         ]
         
         actions.forEach { action in

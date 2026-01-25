@@ -5,7 +5,7 @@ fileprivate typealias R = (
 )
 
 fileprivate let accountRoutes: [R] = [
-    (icon: "gear", title: "General", scene: .general),
+    (icon: "gear", title: "Subscription", scene: .subscription),
 ]
 
 fileprivate let generalRoutes: [R] = [
@@ -88,6 +88,7 @@ fileprivate struct Route: View {
                 .foregroundStyle(theme.text.tertiary)
             
             Text(info.title)
+                .font(size: .sm)
             
             Spacer()
         }

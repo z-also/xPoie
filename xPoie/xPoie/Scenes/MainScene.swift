@@ -149,10 +149,10 @@ fileprivate struct Detail: View {
                     Image(systemName: "sparkle")
                         .resizable()
                         .frame(width: 16, height: 16)
-                        .padding(8)
+                        .padding(10)
                 }
-                .buttonStyle(.omni)
-                .glassEffect(.regular, in: .rect(cornerRadius: 18))
+                .buttonStyle(.plain)
+                .glassEffect(.regular, in: .rect(cornerRadius: 12))
                 .matchedGeometryEffect(
                     id: "glimContent",
                     in: animationNamespace,

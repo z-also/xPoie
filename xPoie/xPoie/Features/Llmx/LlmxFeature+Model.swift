@@ -63,7 +63,7 @@ struct LlmxFeature_ModelViewFlat: View {
     
     var body: some View {
         Button { action(model) } label: {
-            Label(model.name, systemImage: "doc.on.doc")
+            Label(model.name, systemImage: "sparkle")
             if let state = state {
                 switch state.status {
                 case .downloaded(_):
@@ -104,8 +104,7 @@ struct LlmxFeature_ModelStatus: View {
                     .frame(width: 16, height: 16)
                     .padding(6)
                     .foregroundStyle(.blue)
-                    .tooltip("hello world")
-            } else if case .downloading(let progress, let speed) = state?.status {
+            } else if case .downloading(let progress, _) = state?.status {
                 SimpleCircularProgress(progress: progress)
                     .frame(width: 16, height: 16)
                     .padding(6)
@@ -118,7 +117,6 @@ struct LlmxFeature_ModelStatus: View {
                         .padding(6)
                 }
                 .buttonStyle(.omni.with(padding: .zero))
-                .tooltip("hello 阿德反馈 水电费放放  方法放方法反反复复放放方法 放放放放放放放放放放 收到反馈爱番番等等方法放放发发发方法放发发发放放方法方法  放放反反复复付放放放")
             } else if case .failed(let msg) = state?.status {
                 Button(action: download) {
                     Image(systemName: "exclamationmark.circle")

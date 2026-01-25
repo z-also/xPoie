@@ -60,6 +60,6 @@ struct xPoieApp: App {
     private func onSignIn(authorization: ASAuthorization) {
         try? accountService.handleSuccessfulLogin(authorization: authorization)
         account.set(signedIn: true)
-        print("after====", Preferences[.signedIn])
+        Modules.main.switch(scene: .inbox)
     }
 }

@@ -23,14 +23,6 @@ extension Llmx {
             // 速度 ≈ 60-90+ t/s；推荐：超小型中文任务
         )
         
-        nonisolated(unsafe) public static let qwen3_4b_instruct = ModelInfo(
-            id: "qwen3-4b-instruct",
-            name: "Qwen3 4B Instruct (4-bit)",
-            source: .huggingFace("Qwen/Qwen3-4B-Instruct"),
-            fileSizeGB: 2.4,
-            // 速度 ≈ 50-75 t/s；推荐：Qwen3 入门中文/代码
-        )
-        
         // 中型主力文本模型
         nonisolated(unsafe) public static let qwen2_5_7b_instruct = ModelInfo(
             id: "qwen2.5-7b-instruct",
@@ -117,7 +109,6 @@ extension Llmx {
         nonisolated(unsafe) public static let textLlms: [ModelInfo] = [
             phi3_mini_4k_instruct,
             qwen2_5_3b_instruct,
-            qwen3_4b_instruct,
             qwen2_5_7b_instruct,
             qwen2_5_coder_7b_instruct,
             mistral_7b_instruct_v03,
